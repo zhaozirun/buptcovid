@@ -128,7 +128,7 @@ async function postDailyReportFormData(
     const chatId = process.env["TG_CHAT_ID"];
     const botToken = process.env["TG_BOT_TOKEN"];
 
-    if (!!chatId && !!botToken && reportReponse.m !== "今天已经填报了") {
+    if (!!chatId && !!botToken) {
         const bot = new TelegramBot(botToken);
         await bot.sendMessage(
             chatId,
